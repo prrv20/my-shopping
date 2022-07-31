@@ -2,8 +2,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import CategoriesView from '@/views/CategoriesView.vue'
-//import Category from '@/views/Category.vue'
-//import Cart from '@/views/Cart.vue'
+import Category from '@/views/Category.vue'
+import Cart from '@/views/Cart.vue'
 
 Vue.use(VueRouter)
 
@@ -18,17 +18,17 @@ const routes = [
     name:'Categories',
     component:CategoriesView
   },
-  // {
-  //   path:'/category/:id',
-  //   name:'Category',
-  //   component: Category,
-  //   props:true
-  // },
-  // {
-  //   path:'/cart',
-  //   name:'Cart',
-  //   component:Cart
-  // },
+  {
+    path:'/category/:id',
+    name:'Category',
+    component: Category,
+    props:true
+  },
+  {
+    path:'/cart',
+    name:'Cart',
+    component:Cart
+  },
   {
     path: '/about',
     name: 'about',
