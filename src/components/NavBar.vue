@@ -8,13 +8,11 @@
         My Shopping
       </v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-badges>
-        <v-tab>
-        <v-badge color="green" :content="cartCount" class="ma-3" :value="cartCount > 0">
-          <v-icon @click="redirectTo('Cart')">mdi-cart-variant</v-icon>
-        </v-badge>
-      </v-tab>
-      </v-badges>
+      
+          <v-badge color="green" :content="cartCount" class="ma-3" :value="cartCount > 0">
+            <v-icon @click="redirectTo('Cart')">mdi-cart-variant</v-icon>
+          </v-badge>
+        
     </v-app-bar>
 
     <v-navigation-drawer v-model="drawer" absolute temporary>

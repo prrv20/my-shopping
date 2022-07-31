@@ -3,7 +3,7 @@
         <h2 class="text-center indigo--text">Categoría: {{ id }}</h2>
         <v-container>
 			<v-row>
-				<load-comp></load-comp>
+				<!-- <load-comp></load-comp> -->
 			</v-row>
 			<v-row justify="center">
 				<v-col class="pa-5" col="12" sm="6" md="4" v-for="product in products" :key="product.id">

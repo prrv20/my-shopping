@@ -42,6 +42,24 @@ export default new Vuex.Store({
           p.count += 1
         }
       })
+      },
+      ADD_STOCK_PRODUCT_CART(state, idProduct){
+        state.cart.forEach((p) => {
+          if(p.id == idProduct){
+            p.count += 1
+          }
+      })
+      },
+      REMOVE_STOCK_PRODUCT_CART(state, idProduct){
+        state.cart.forEach((p) => {
+          if(p.id == idProduct && p.count > 0){
+            p.count -= 1
+          }
+        })
+      },
+      REMOVE_PRODUCT_CART(state, idProduct){
+        let index = state.cart.findIndex((p) => {p.id == idProduct})
+        state.cart.splice(index, 1)
       }
   },
   actions: {
@@ -61,6 +79,15 @@ export default new Vuex.Store({
     },
     addToCart({ commit}, product){
       commit('ADD_TO_CART', product)
+    }, 
+    addStockProductCart({ commit }, idProduct){
+      commit('ADD_STOCK_PRODUCT_CART', idProduct)
+    },
+    removeStockProductCart({ commit }, idProduct){
+      commit('REMOVE_STOCK_PRODUCT_CART', idProduct)
+    },
+    removeProductCart({ commit }, idProduct){
+      commit('REMOVE_PRODUCT_CART', idProduct)
     }
   },
   modules: {
