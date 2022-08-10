@@ -79,7 +79,7 @@ export default new Vuex.Store({
     },
     addToCart({ commit}, product){
       commit('ADD_TO_CART', product)
-    }, 
+    },
     addStockProductCart({ commit }, idProduct){
       commit('ADD_STOCK_PRODUCT_CART', idProduct)
     },
@@ -89,6 +89,7 @@ export default new Vuex.Store({
     removeProductCart({ commit }, idProduct){
       commit('REMOVE_PRODUCT_CART', idProduct)
     }
+    // d-flex align-stretch
   },
   modules: {
   }

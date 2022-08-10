@@ -105,7 +105,7 @@ export default {
 		this.snackbar = true
 	}
 	}
-	
+
     // watch: {},
     // components: {},
     // mixins: [],
@@ -116,5 +116,5 @@ export default {
 </script>
 
 <style scoped>
-    
+
 </style>
